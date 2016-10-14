@@ -12,6 +12,10 @@ if has('gui_running')
     set background=dark
 endif
 
+"" show line numbers
+set nu
+
+"" tabs are four spaces
 filetype plugin indent on
 " show existing tab with 4 spaces width
 set tabstop=4
