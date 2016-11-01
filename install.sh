@@ -36,6 +36,10 @@ fi #otherwise I don't want to be on this machine
 # install oh-my-zsh!
 sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
+# run the powerline font installer
+
+`./dependencies/powerline-fonts/install.sh`
+
 # copy zshrc to ~/.zshrc
 cp zshrc ~/.zshrc
 
