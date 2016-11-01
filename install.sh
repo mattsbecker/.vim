@@ -15,7 +15,7 @@ echo 'NERDTree successfully installed!'
 
 # Install syntasitc
 echo 'Installing syntastic'
-git clone --depth=1 https://github.com/scrooloose/syntastic.git ~/.vim/bundle/syntasitc
+git clone --depth=1 https://github.com/scrooloose/syntastic.git ~/.vim/bundle/syntastic
 echo 'Success!'
 
 # copy the vimrc file to ~/.vimrc
