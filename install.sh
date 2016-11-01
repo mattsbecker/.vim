@@ -12,6 +12,12 @@ echo 'Installing NERDtree...'
 git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
 echo 'NERDTree successfully installed!'
 
+
+# Install syntasitc
+echo 'Installing syntastic'
+git clone --depth=1 https://github.com/scrooloose/syntastic.git ~/.vim/bundle/syntasitc
+echo 'Success!'
+
 # copy the vimrc file to ~/.vimrc
 echo 'Copying vimrc to ~/.vimrc'
 cp vimrc ~/.vimrc
@@ -38,7 +44,7 @@ sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install
 
 # run the powerline font installer
 
-`./dependencies/powerline-fonts/install.sh`
+./dependencies/powerline-fonts/install.sh
 
 # copy zshrc to ~/.zshrc
 cp zshrc ~/.zshrc
