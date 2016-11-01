@@ -15,6 +15,9 @@ endif
 "" show line numbers
 set nu
 
+"" map NERDTreeToggle to  control+n 
+map <C-n> :NERDTreeToggle<CR>
+
 "" tabs are four spaces
 filetype plugin indent on
 " show existing tab with 4 spaces width
