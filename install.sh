@@ -12,6 +12,10 @@ echo 'Installing NERDtree...'
 git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
 echo 'NERDTree successfully installed!'
 
+echo 'Installing vim-rails...'
+git clone git://github.com/tpope/vim-rails.git ~/.vim/bundle/vim-rails
+git clone git://github.com/tpope/vim-bundler.git ~/.vim/bundle/vim-bundler
+
 
 # Install syntasitc
 echo 'Installing syntastic'
@@ -49,4 +53,4 @@ sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install
 # copy zshrc to ~/.zshrc
 cp zshrc ~/.zshrc
 
-/bin/zsh
+ruby --version
