@@ -88,4 +88,12 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
+
+alias gvim="/Applications/MacVim.app/Contents/MacOS/Vim -g"
+
+export ANDROID_SDK=/usr/local/android-sdk
+export ANDROID_NDK=/usr/local/android-ndk
+export PATH=$PATH:$ANDROID_SDK/platform-tools:$ANDROID_NDK
+eval $(/usr/libexec/path_helper -s)
+path+=('~/.rbenv/bin')
 eval "$(rbenv init -)"
