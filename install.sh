@@ -1,10 +1,26 @@
 #!/bin/bash
 
+UNAME_RESULT=`uname`
+
+#install homebrew if this is a Mac
+# then insatll wget and curl
+if [ "$UNAME_RESULT" == "Darwin" ]
+then
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" && brew install wget && brew install curl
+
+  #install the latest version of Git from using homebrew
+  wait
+  echo 'Installing the latest version of Git'
+  brew install git
+  echo 'Success'
+  echo `git --version`
+fi
+
 # Setup Vim first...
 
 # make sure pathogen is installed to ~/.vim/autoload/pathogen.vim
 echo 'Downloading and installing pathogen...'
-mkdir -p ~/.vim/autoload ~/.vim/bundle && \ curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 echo 'Success!'
 
 # Install NERDTree
@@ -31,12 +47,11 @@ cp vimrc ~/.vimrc
 cp -r colors ~/.vim/colors
 
 # Check to see if  ZSH installed and that it's the default shell
-UNAME_RESULT=`uname -a`
-if [ "$UNAME_RESULT" -eq "Darwin" ]
+if [ "$UNAME_RESULT" == "Darwin" ]
 then
     # is this a Mac? ZSH already exists, so set it to the default shell
     chsh -s /bin/zsh;
-elif [ "$UNAME_RESULT" -eq "Linux" ]
+elif [ "$UNAME_RESULT" == "Linux" ]
 then
     # is it Linux? I typically only work on systems that have apt-get... use it.
     `sudo apt-get install -y zsh`
