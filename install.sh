@@ -16,6 +16,11 @@ echo 'Installing vim-rails...'
 git clone git://github.com/tpope/vim-rails.git ~/.vim/bundle/vim-rails
 git clone git://github.com/tpope/vim-bundler.git ~/.vim/bundle/vim-bundler
 
+echo 'Installing PHP tools...'
+git clone git://github.com/ncm2/ncm2.git ~/.vim/bundle/ncm2
+git clone git://github.com/phpactor/phpactor.git ~/.vim/bundle/phpactor
+git clone git://github.com/phpactor/ncm2-phpactor.git ~/.vim/bundle/ncm2-phpactor
+git clone git://github.com/neomake/neomake.git ~/.vim/bundle/neomake
 
 # Install syntasitc
 echo 'Installing syntastic'
